@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Minecraft Controller</title>
+	<link rel="stylesheet" href="./bootstrap.min.css">
+	<script src="./bootstrap.min.js"></script>
+	<script src="./fetch.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body style="justify-content: center; text-align: center;" onload="loadPlayerlist(), initServerData(url, port), authen()">
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">Minecraft Controller</a>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+			</ul>
+			<form class="d-flex">
+			  <button class="btn btn-outline-danger " type="submit" onclick="logout()">Logout</button>
+			</form>
+		  </div>
+		</div>
+	  </nav>
+
+	<div style="display: flex; justify-content: center;"  >
+		<div class="card" style="width: 18rem; margin-right: 10px; margin-top: 40px; margin-bottom: 10px;">
+			<div class="card-header">
+			  Server Infomation
+			</div>
+			<ul class="list-group list-group-flush" id="info">
+					<li class="list-group-item">
+						<div class="row align-items-center">
+							<div class="col">Loading...</div>
+						</div>
+					</li>
+
+			</ul>
+		</div>
+	</div>
+
+	<div style="padding-top: 10px; padding-bottom: 50px;">
+		<div class="mb-3" style="max-width: 18rem; margin: auto;">
+			<label for="exampleFormControlInput1" class="form-label">Username</label>
+			<input type="email" class="form-control" id="username" placeholder="Username" value="Petchz">
+		</div>
+		<button type="button" class="btn btn-success" onclick="loginServer()">Login</button>
+		<button type="button" class="btn btn-danger" onclick="logoutServer()">Logout</button>
+	</div>
+
+	<div style="display: flex; justify-content: center;">
+		<div class="card" style="width: 18rem; margin-right: 10px;">
+			<div class="card-header">
+			  Player List
+			</div>
+			<ul class="list-group list-group-flush" id="list">
+					<li class="list-group-item">
+						<div class="row align-items-center">
+							<div class="col">Loading...</div>
+						</div>
+					</li>
+
+			</ul>
+		</div>
+	</div>
+	<script>
+
+	</script>
+</body>
+</html>
